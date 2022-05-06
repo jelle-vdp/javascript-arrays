@@ -24,6 +24,18 @@
         "cerise",
     ];
 
-    // your code here
+    const adjustDisplayArr = () => {
+        fruits.splice(0, 1, "banana");
+        fruits.splice(-1, 1, "kiwi");
+
+        fruits.forEach((fruit) => {           
+            const resNode = document.getElementById("result")
+            let liNode = document.createElement("li");
+            liNode.appendChild(document.createTextNode(fruit));
+            resNode.appendChild(liNode);
+        });
+    }
+ 
+    document.getElementById("run").addEventListener("click", adjustDisplayArr);
 
 })();

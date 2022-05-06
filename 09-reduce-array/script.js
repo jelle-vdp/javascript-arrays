@@ -89,6 +89,6 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => console.log(people.reduce((prev, curr) => prev + curr.age, 0)));
 
 })();

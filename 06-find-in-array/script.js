@@ -89,6 +89,16 @@
         },
     ];
 
-    // your code here
+    const outputEmailAndIndex = (fName, lName) => {
+        let index = people.findIndex(person => person.firstname === fName && person.lastname === lName);
+        console.log(people[index].email);
+
+        const resNode = document.getElementById("result")
+        let pNode = document.createElement("p");
+        pNode.appendChild(document.createTextNode(index));
+        resNode.appendChild(pNode);
+    };  
+
+    document.getElementById("run").addEventListener("click", () => outputEmailAndIndex("Jean", "Dupont"));
 
 })();

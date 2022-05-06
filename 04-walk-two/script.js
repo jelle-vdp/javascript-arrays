@@ -26,6 +26,10 @@
         "cerise",
     ];
 
-    // your code here
+    const outputFruitsToConsole = () => {
+        fruits.forEach(fruit => console.log(fruit));
+    };
+
+    document.getElementById("run").addEventListener("click", outputFruitsToConsole);
 
 })();

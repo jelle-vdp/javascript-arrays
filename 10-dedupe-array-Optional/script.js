@@ -28,5 +28,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        const filteredFruits = [];
+        fruits.forEach(fruit => {
+            if (!filteredFruits.includes(fruit)){
+                filteredFruits.push(fruit);
+            };
+        });
+        console.log(filteredFruits);
+    });
 })();
